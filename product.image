@@ -1,0 +1,15 @@
+<Image
+  src={
+    product.image ||
+    "/fallback.png" || // static local fallback
+   "https://source.unsplash.com/160x160/?clothes"
+
+  }
+  alt={product.name}
+  width={160}
+  height={160}
+  className="w-40 h-40 object-cover mb-4"
+  onError={(e) => {
+    e.currentTarget.src = "/fallback.png";
+  }}
+/>
